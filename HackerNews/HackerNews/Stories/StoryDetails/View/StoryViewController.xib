@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StoryViewController" customModule="HackerNews" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="tF1-h8-gCg" id="1ja-fM-43g"/>
+                <outlet property="storyWebView" destination="Vd7-Ut-fWl" id="URg-zC-CGZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tF1-h8-gCg">
+                    <rect key="frame" x="12" y="12" width="56" height="34"/>
+                    <state key="normal" title="&lt; Back">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onCloseButton:" destination="-1" eventType="touchUpInside" id="Uf4-JC-d6J"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBk-ZM-K85">
+                    <rect key="frame" x="0.0" y="54" width="375" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="iws-nL-R8h"/>
+                    </constraints>
+                </view>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vd7-Ut-fWl">
+                    <rect key="frame" x="0.0" y="55" width="375" height="612"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hBk-ZM-K85" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1as-QF-mqM"/>
+                <constraint firstAttribute="trailing" secondItem="hBk-ZM-K85" secondAttribute="trailing" id="BHE-LW-RKE"/>
+                <constraint firstAttribute="bottom" secondItem="Vd7-Ut-fWl" secondAttribute="bottom" id="DqY-2E-Tqh"/>
+                <constraint firstAttribute="trailing" secondItem="Vd7-Ut-fWl" secondAttribute="trailing" id="Poe-rk-gff"/>
+                <constraint firstItem="tF1-h8-gCg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="12" id="S7M-tT-Uwh"/>
+                <constraint firstItem="Vd7-Ut-fWl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nBB-wA-tbO"/>
+                <constraint firstItem="tF1-h8-gCg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="12" id="rKW-9y-zrq"/>
+                <constraint firstItem="Vd7-Ut-fWl" firstAttribute="top" secondItem="hBk-ZM-K85" secondAttribute="bottom" id="uIJ-13-rem"/>
+                <constraint firstItem="hBk-ZM-K85" firstAttribute="top" secondItem="tF1-h8-gCg" secondAttribute="bottom" constant="8" id="y9E-hE-q0e"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

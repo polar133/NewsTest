@@ -1,0 +1,26 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+target 'HackerNews' do
+  use_frameworks!
+
+  # Pods for HackerNews
+  # Networking
+  pod 'Alamofire', '~> 4.4'
+  pod 'UnboxedAlamofire', '~> 2.0'
+  pod 'Unbox'
+  
+  # Database
+  pod 'RealmSwift'
+  # Table
+  pod 'SwipeCellKit'
+  # UI
+  pod 'PullToRefreshSwift'
+  
+
+  target 'HackerNewsTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
